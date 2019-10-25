@@ -1,0 +1,4 @@
+crazed,silly,shy,goofy,angry,lazy,obstinate,purple
+monkey,elephant,cyclist,teacher,author,hockey player
+played a ukulele,danced a jig,combed his hair,flapped her ears
+on the table,at the grocery store,in the shower,after breakfast,with a broom
