@@ -40,6 +40,8 @@ def getFrontground(img_path):
     # 1.10 绘制轮廓
     draw_img = cv2.drawContours(img.copy(), contours, -1, (0, 0, 255), 3)
     cv2.imshow('result', draw_img)
+    # 保存轮廓图
+    cv2.imwrite('107.png', draw_img, [int(cv2.IMWRITE_JPEG_QUALITY), 95])
     cv2.waitKey(0)
     cv2.destroyAllWindows()
     # 1.11 遍历像素点是否在轮廓内，存储在轮廓内的像素
@@ -108,8 +110,8 @@ def kmeansColor(img_path):
     print('聚类中心：\n', centroids)
 
 def main():
-    i = 751
-    img_path = 'pic/helmet_filter/' + str(i) + '.jpg'
+    i = 107
+    img_path = 'pic/' + str(i) + '.jpg'
     img = getFrontground(img_path)
     img_path2 = 'temp_pic/' + str(i) + '.jpg'
     cv2.imwrite(img_path2, img)
